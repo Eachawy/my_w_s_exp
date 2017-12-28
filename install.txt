@@ -1,0 +1,11 @@
+- Using angular/cli  [ https://cli.angular.io/  --- https://github.com/angular/angular-cli]
+****ng new backend --style=scss
+- Using angular2-materialize  [ https://www.npmjs.com/package/angular2-materialize ]
+****npm install materialize-css --save
+****npm install angular2-materialize --save
+****npm install jquery@^2.2.4 --save
+****npm install hammerjs --save
+- add coustom js
+****add js path in angular-cli and " declare var your method name : any; "
+
+

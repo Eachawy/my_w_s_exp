@@ -1,0 +1,17 @@
+nav {
+    height: 180px;
+    .button-collapse {
+    display:block !important;
+    }   
+    .brand-logo {
+        left: 100px;
+        top: 50px;
+        font-size: 35pt;
+    }
+    .menu {
+        position: absolute;
+        bottom:0;
+        left:0;
+        display:none !important;
+    }
+}
