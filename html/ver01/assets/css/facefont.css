@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'DubaiF_R';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Dubai/DubaiW23-Regular.eot); /* For IE6-8 */
+  src: local('DubaiF'),
+       local('DubaiW23-Regular'),
+       url(../fonts/Dubai/DubaiW23-Regular.woff2) format('woff2'),
+       url(../fonts/Dubai/DubaiW23-Regular.woff) format('woff'),
+       url(../fonts/Dubai/DubaiW23-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DubaiF_L';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Dubai/DubaiW23-Light.eot); /* For IE6-8 */
+  src: local('DubaiF'),
+       local('DubaiW23-Light'),
+       url(../fonts/Dubai/DubaiW23-Light.woff2) format('woff2'),
+       url(../fonts/Dubai/DubaiW23-Light.woff) format('woff'),
+       url(../fonts/Dubai/DubaiW23-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DubaiF_M';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Dubai/DubaiW23-Medium.eot); /* For IE6-8 */
+  src: local('DubaiF'),
+       local('DubaiW23-Medium'),
+       url(../fonts/Dubai/DubaiW23-Medium.woff2) format('woff2'),
+       url(../fonts/Dubai/DubaiW23-Medium.woff) format('woff'),
+       url(../fonts/Dubai/DubaiW23-Medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DubaiF_B';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Dubai/DubaiW23-Bold.eot); /* For IE6-8 */
+  src: local('DubaiF'),
+       local('DubaiW23-Bold'),
+       url(../fonts/Dubai/DubaiW23-Bold.woff2) format('woff2'),
+       url(../fonts/Dubai/DubaiW23-Bold.woff) format('woff'),
+       url(../fonts/Dubai/DubaiW23-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'RTA_R';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/RTA/RTA-Regular.eot); /* For IE6-8 */
+  src: local('RTA_R'),
+       local('DubaiW23-Bold'),
+       url(../fonts/RTA/RTA-Regular.woff2) format('woff2'),
+       url(../fonts/RTA/RTA-Regular.woff) format('woff'),
+       url(../fonts/RTA/RTA-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DS_Crystal';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/DS_Crystal/DS_Crystal.eot); /* For IE6-8 */
+  src: local('DS_Crystal'),
+       local('DS_Crystal'),
+       url(../fonts/DS_Crystal/DS_Crystal.woff) format('woff'),
+       url(../fonts/DS_Crystal/DS_Crystal.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'RS_R';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/RobotoSlab/RobotoSlab-Regular-webfont.eot); /* For IE6-8 */
+  src: local('DS_Crystal'),
+       local('DS_Crystal'),
+       url(../fonts/RobotoSlab/RobotoSlab-Regular-webfont.woff) format('woff'),
+       url(../fonts/RobotoSlab/RobotoSlab-Regular-webfont.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'RS_L';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/RobotoSlab/RobotoSlab-Light-webfont.eot); /* For IE6-8 */
+  src: local('DS_Crystal'),
+       local('DS_Crystal'),
+       url(../fonts/RobotoSlab/RobotoSlab-Light-webfont.woff) format('woff'),
+       url(../fonts/RobotoSlab/RobotoSlab-Light-webfont.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'RS_B';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/RobotoSlab/RobotoSlab-Bold-webfont.eot); /* For IE6-8 */
+  src: local('DS_Crystal'),
+       local('DS_Crystal'),
+       url(../fonts/RobotoSlab/RobotoSlab-Bold-webfont.woff) format('woff'),
+       url(../fonts/RobotoSlab/RobotoSlab-Bold-webfont.ttf) format('truetype');
+}

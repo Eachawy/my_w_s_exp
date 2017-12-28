@@ -1,0 +1,36 @@
+@import url('facefont.css');
+html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, q, small, strong, sub, sup, tt, var, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video ,input
+{font-size: 100%; margin: 0; padding: 0; line-height: 1.4em; font-weight: normal;}
+body {padding:0 !important;transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s;font-family:"RS_R", Helvetica, Arial, sans-serif;background:#fff;}
+img { border: none; }
+.spacer { clear: both; font-size: 0; line-height: 0; }
+section, article, footer, nav, aside { display: block; } 
+table { border-collapse: separate; border-spacing: 0px; width: 100%; }
+ul{ list-style-type: none; }
+a {cursor:pointer;}
+iframe {border:0;width:100%;}
+.material-icons {font-family: 'Material Icons';font-weight: normal;font-style: normal;font-size: 24px;display: inline-block;line-height: 1;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;-webkit-font-smoothing: antialiased;text-rendering: optimizeLegibility;-moz-osx-font-smoothing: grayscale;font-feature-settings: 'liga';}
+button[disabled], html input[disabled], .disabled {pointer-events: none;cursor: default !important;opacity: 0.4;background: #797979 !important;border-color: #ccc !important;}
+/*------------------------------------------------------------------*/
+nav {background:none;height: 100px;}
+nav .center {width:100%;display:block;}
+nav .center li {float:none;display:inline-block;}
+nav .center li a {line-height: 100px;color:#0a0a0a;}
+nav .brand-logo {left: 20%;top:28%;color:#000;}
+
+.title_with_img {height:635px;background:url('../images/hands.jpg') no-repeat;position:relative;background-size:cover;}
+.title_with_img:after{content:'';width:100%;background:url('../images/shap_2.png')no-repeat center;height:106px;background-size:cover;position:absolute;bottom:0;left:0;right:0;}
+.title_with_img:before {content:'';width:100%;height:100%;background-color: rgba(255,211,0,0.9);position:absolute;left:0;right:0;top:0;bottom:0;}
+.title_with_img h1, .title_with_img h3 {position: relative;z-index: 9999;text-align:center;}
+.title_with_img h1 {font: 140px / 195px 'RS_B';padding-top: 130px;}
+.title_with_img h3 {font: 35px / 50px 'RS_L';}
+
+
+
+@media only screen and (max-width:750px){
+	nav .brand-logo {
+	    left: 50%;
+	    -webkit-transform: translateX(-50%);
+	    transform: translateX(-50%);
+	}
+}
