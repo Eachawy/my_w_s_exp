@@ -1,7 +1,7 @@
 @import url('facefont.css');
 html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, q, small, strong, sub, sup, tt, var, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video ,input
 {font-size: 100%; margin: 0; padding: 0; line-height: 1.4em; font-weight: normal;}
-body {padding:0 !important;transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s;font-family:"RS_R", Helvetica, Arial, sans-serif;background:#fff;}
+body {padding:0 !important;transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s;font-family:"RS_R", Helvetica, Arial, sans-serif;background:#fff;color:#0a0a0a;}
 img { border: none; }
 .spacer { clear: both; font-size: 0; line-height: 0; }
 section, article, footer, nav, aside { display: block; } 
@@ -17,14 +17,26 @@ nav .center {width:100%;display:block;}
 nav .center li {float:none;display:inline-block;}
 nav .center li a {line-height: 100px;color:#0a0a0a;}
 nav .brand-logo {left: 20%;top:28%;color:#000;}
-
-.title_with_img {height:635px;background:url('../images/hands.jpg') no-repeat;position:relative;background-size:cover;}
+.title_with_img {height:635px;background:url('../images/hands.jpg') no-repeat;position:relative;background-size:cover;position:relative;}
 .title_with_img:after{content:'';width:100%;background:url('../images/shap_2.png')no-repeat center;height:106px;background-size:cover;position:absolute;bottom:0;left:0;right:0;}
 .title_with_img:before {content:'';width:100%;height:100%;background-color: rgba(255,211,0,0.9);position:absolute;left:0;right:0;top:0;bottom:0;}
 .title_with_img h1, .title_with_img h3 {position: relative;z-index: 9999;text-align:center;}
 .title_with_img h1 {font: 140px / 195px 'RS_B';padding-top: 130px;}
 .title_with_img h3 {font: 35px / 50px 'RS_L';}
 
+.part {padding:20px 0;}
+h4 {text-align:center;font: 40pt / 75px 'RS_L';padding: 10px 0;}
+p {font: 13pt / 30px 'RS_L';color: #0a0a0a;text-align:center;padding: 10px 0;}
+.Business {padding:40px 0;}
+.Business .icon {width:100px;height:100px;margin:0 auto 30px auto;background:#f9f9f9;text-align:center;}
+.Business span {font: 16pt / 35px 'RS_L';display:block;text-align: center;}
+.Business span:after {content:'';width:30px;height:3px;background:#ffd300;display: block;position: relative;left: calc(50% - 15px);margin-top:10px;}
+.Business .icon i {font-size: 50px;line-height: 100px;}
+.Business number {font: 55pt / 85px 'RS_L';text-align:center;display:block;}
+
+.title_shadow {height:555px;position:relative;padding: 150px 0;}
+.title_shadow:before {content:'';position:absolute;top:0;left:0;right:0;height:93px;background:url('../images/top_shap.png') no-repeat center;background-size:cover;}
+.title_shadow:after {content:'';position:absolute;bottom:0;left:0;right:0;height:93px;background:url('../images/bottom_shap.png') no-repeat center;background-size:cover;}
 
 
 @media only screen and (max-width:750px){
