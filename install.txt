@@ -7,7 +7,8 @@
 ****npm install hammerjs --save
 - add coustom js
 ****add js path in angular-cli and " declare var your method name : any;"
-- install firebase
-****npm install firebase angularfire2 --save
+- install firebase [  https://github.com/angular/angularfire2/blob/master/docs/install-and-setup.md ]
+****npm install firebase@^4.8.0 angularfire2 --save
+
 
 
