@@ -11,11 +11,13 @@ export class UsersService {
   userscollection: AngularFirestoreCollection<user>;
   users: Observable<user[]>;
   userDoc: AngularFirestoreDocument<user>;
-
+  userToEdit: user;
+  editstate: boolean = false;
 
   constructor(public asf: AngularFirestore) { 
     this.userscollection = this.asf.collection('users');
     //this.userscollection = this.asf.collection('users', ref => ref.orderBy('name','asc')); // asc
+
     //this.users = this.asf.collection('users').valueChanges();
     this.users = this.asf.collection('users').snapshotChanges().map(change => {
       return change.map(a => {

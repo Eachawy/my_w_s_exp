@@ -1,6 +1,5 @@
-<app-add-user></app-add-user>
-
 <div *ngIf="Userview?.length > 0; else noUsers">
+  <a routerLink="/adduser" class="orange btn">Add New User</a><br>
   <table class="striped">
     <thead>
       <tr>
@@ -27,4 +26,3 @@
   <h5>There are no Users to list</h5>
 </ng-template>
 
-<a href="/add-user">Add New User</a>
