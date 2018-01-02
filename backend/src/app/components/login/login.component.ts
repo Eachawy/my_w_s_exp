@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
   getuser(user, pass) {
     if (user === 'admin' && pass === '123456') {
       this.authonService.setuserloggedin();
-      console.log(this.authonService.getuserloggedin());
       this.router.navigate(['welcome']);
+      //console.log(this.authonService.getuserloggedin());
     }
     return false;
   }

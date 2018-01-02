@@ -28,7 +28,7 @@ export class AddUserComponent implements OnInit {
 
   }
   goback(){
-    this.router.navigate(['/']);
+    this.router.navigate(['welcome']);
   }
   onSubmit(){
     if (this.User.name != '' && this.User.username != '' && this.User.password != ''){
