@@ -1,7 +1,7 @@
 
 
 
-<ul id="slide-out" class="side-nav" materialize="sideNav" [materializeParams]="[{closeOnClick:true}]">
+<ul id="slide-out" class="side-nav" materialize="sideNav">
   <!-- [materializeParams]="[{edge:'left',closeOnClick:true}]"-->
   <li (click)="closeslidnav()">
     <div class="user-view">
@@ -19,7 +19,7 @@
       </a>
     </div>
   </li>
-  <li *ngFor="let routeName of routeNames" routerLinkActive="active" >
-    <a [routerLink]="[routeName]" (click)="closeslidnav()">{{routeName}}</a>
+  <li *ngFor="let routeName of routeNames" routerLinkActive="active" (click)="closeSnav()">
+    <a [routerLink]="[routeName]">{{routeName}}</a>
   </li>
 </ul>

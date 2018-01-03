@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { user } from '../../models/user'
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-add-user',
@@ -23,11 +24,20 @@ export class AddUserComponent implements OnInit {
     // this.User = this.usersService.AnthUser;
     // console.log(this.User);
   }
-  goback(){
-    this.router.navigate(['welcome']);
+  clear(){
+    this.User.name = '';
+    this.User.username = '';
+    this.User.password = '';
+    $('.tbview').fadeIn();
+    $('.adduserForm').fadeOut();
   }
-  onSubmit(){
 
+  adduser(){
+    $('.tbview').fadeOut();
+    $('.adduserForm').fadeIn();
+  }
+
+  onSubmit(){
     if (this.editstate){
       this.usersService.edituser(this.User);
       this.editstate = false;
@@ -42,10 +52,6 @@ export class AddUserComponent implements OnInit {
         this.User.password = '';
       }
     }
-
-
-
-
   }
 
   deleteuser(event, user) {

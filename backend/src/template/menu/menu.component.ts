@@ -18,9 +18,11 @@ export class MenuComponent implements OnInit {
          
   }
 
-  closeslidnav (){
-    this.modalActions.emit({ action: "sideNav", params: ['hide'] });
-    //$('#slid-out').addClass('SNavhiden');
+  closeSnav(): any{
+    setTimeout(() => {
+      $('#sidenav-overlay').remove();
+    }, 250);
+    
   }
 
 }

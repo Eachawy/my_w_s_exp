@@ -1,6 +1,6 @@
 <nav>
   <div class="nav-wrapper">
-    <a materialize="sideNav" href="#" data-activates="slide-out" class="button-collapse">
+    <a materialize="sideNav" href="#" [materializeParams]="[{edge:'left', closeOnClick:true}]" data-activates="slide-out" class="button-collapse">
       <i class="material-icons">menu</i>
     </a>
     <a href="#" class="brand-logo">{{titlepage}}</a>
