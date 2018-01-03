@@ -1,0 +1,60 @@
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">
+      Add User
+    </span>
+    <form materialize (ngSubmit)="onSubmit()" class="col s6">
+      <div class="row">
+        <div class="input-field col s4">
+          <input type="text" placeholder="Add User" [(ngModel)]="User.name" name="name">
+          <label>Name</label>
+        </div>
+        <div class="input-field col s4">
+          <input type="text" placeholder="Add Username" [(ngModel)]="User.username" name="username">
+          <label>User Name</label>
+        </div>
+        <div class="input-field col s4">
+          <input type="text" placeholder="Add Password" [(ngModel)]="User.password" name="password">
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Submit" class="btn">
+        <a class="brown btn" (click)='goback()'>Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<div *ngIf="usersService.AnthUser?.length > 0; else noUsers">
+  <a routerLink="/adduser" class="orange btn">Add New User</a>
+  <br>
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>User Name</th>
+        <th>Password</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersService.AnthUser">
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.password}}</td>
+        <td>
+          <a (click)="deleteuser($event, user)">Delete</a>
+        </td>
+        <td>
+          <a (click)="edituser($event, user)">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noUsers>
+  <h5>There are no Users to list</h5>
+</ng-template>

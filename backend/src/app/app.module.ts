@@ -18,12 +18,12 @@ import { MenuComponent } from '../template/menu/menu.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 // Services
 import { UsersService } from './services/users.service';
-import { AddUserComponent } from './components/add-user/add-user.component';
+import { AddUserComponent } from './components/users/users.component';
 import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', canActivate: [AuthGuard], component: WelcomeComponent },
-  { path: 'adduser', canActivate: [AuthGuard], component: AddUserComponent },
+  { path: 'Users', canActivate: [AuthGuard], component: AddUserComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent }
 ];

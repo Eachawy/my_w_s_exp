@@ -1,8 +1,9 @@
 
 
 
-<ul id="slide-out" class="side-nav" materialize="sideNav">
-  <li>
+<ul id="slide-out" class="side-nav" materialize="sideNav" [materializeParams]="[{closeOnClick:true}]">
+  <!-- [materializeParams]="[{edge:'left',closeOnClick:true}]"-->
+  <li (click)="closeslidnav()">
     <div class="user-view">
       <div class="background">
         <img src="../assets/images/office.jpg">
@@ -18,20 +19,7 @@
       </a>
     </div>
   </li>
-  <li>
-    <a href="#!">
-      <i class="material-icons">cloud</i>First Link With Icon</a>
-  </li>
-  <li>
-    <a href="#!">Second Link</a>
-  </li>
-  <li>
-    <div class="divider"></div>
-  </li>
-  <li>
-    <a class="subheader">Subheader</a>
-  </li>
-  <li>
-    <a class="waves-effect" href="#!">Third Link With Waves</a>
+  <li *ngFor="let routeName of routeNames" routerLinkActive="active" >
+    <a [routerLink]="[routeName]" (click)="closeslidnav()">{{routeName}}</a>
   </li>
 </ul>

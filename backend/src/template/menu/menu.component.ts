@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+import * as $ from 'jquery';
+import { MaterializeAction } from 'angular2-materialize';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  routeNames = ['Users'];
+  modalActions = new EventEmitter<string | MaterializeAction>();
+
   constructor() { }
 
   ngOnInit() {
+         
+  }
+
+  closeslidnav (){
+    this.modalActions.emit({ action: "sideNav", params: ['hide'] });
+    //$('#slid-out').addClass('SNavhiden');
   }
 
 }
