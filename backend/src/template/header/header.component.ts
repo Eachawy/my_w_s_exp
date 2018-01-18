@@ -19,13 +19,18 @@ export class HeaderComponent implements OnInit {
   constructor() {  }
 
   ngOnInit() {
-    pubCore.hideprogress()
-    //console.log(pubCore);
+    pubCore.hideprogress();
+    
+    this.size();
+
   }
 
-  closeslidnav() {
-    //this.modalActions.emit({ action: "sideNav", params: ['hide'] });
-    //$('#slid-out').addClass('SNavhiden');
+  size() {
+    var H = $(window).height();
+    var head = $('nav').outerHeight();
+    var footer = $('footer').outerHeight();
+    var content = H - (head + footer);
+    $('._body').height(content - 1);
   }
 
 }

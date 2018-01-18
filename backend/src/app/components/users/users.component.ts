@@ -14,6 +14,7 @@ export class AddUserComponent implements OnInit {
   User : user = {id:'', name : '', username : '', password : ''}
   editstate: boolean = false;
   Userview: user[];
+  autocomp: any;
 
   constructor(private usersService: UsersService, private router: Router) { }
 
@@ -23,18 +24,53 @@ export class AddUserComponent implements OnInit {
     // });
     // this.User = this.usersService.AnthUser;
     // console.log(this.User);
+    // for (let i = 0; i < this.usersService.AnthUser.length; i++){
+    //   this.autocomp.push = this.usersService.AnthUser[i].name;
+    // }
+
+    
+    this.autocomp = {
+      'data': {
+        "__": null,
+        "  ": null,
+      },
+      onAutocomplete: (val) => {
+        console.log(val);
+      }
+    };
+
+  }
+
+  selecteddata(v:any){
+    console.log(v);
+  }
+  
+  search2($event) {
+    let q = $event.target.value;
+    this.usersService.startAt.next(q);
+    this.usersService.endAt.next(q + "\uf8ff");
+
+    
+    if (this.usersService.obj != undefined){
+        this.usersService.obj.forEach((n, i) => {
+          this.autocomp.data[n.name] = null;
+        });
+    }
+
   }
   clear(){
     this.User.name = '';
     this.User.username = '';
     this.User.password = '';
-    $('.tbview').fadeIn();
-    $('.adduserForm').fadeOut();
+    this.animat('.adduserForm', '.tbview');
   }
 
   adduser(){
-    $('.tbview').fadeOut();
-    $('.adduserForm').fadeIn();
+    this.animat('.tbview', '.adduserForm');
+  }
+
+  animat(hidediv,showdiv){
+    $(hidediv).fadeOut(600, function () { $(showdiv).fadeIn(600); });
   }
 
   onSubmit(){
@@ -44,6 +80,7 @@ export class AddUserComponent implements OnInit {
       this.User.name = '';
       this.User.username = '';
       this.User.password = '';
+      this.animat('.adduserForm', '.tbview');
     }else{
       if (this.User.name != '' && this.User.username != '' && this.User.password != '') {
         this.usersService.addUser(this.User);
@@ -59,6 +96,7 @@ export class AddUserComponent implements OnInit {
   }
 
   edituser(event, user) {
+    this.animat('.tbview', '.adduserForm');
     this.editstate = true;
     this.User.id = user.id;
     this.User.name = user.name;

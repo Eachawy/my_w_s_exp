@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Rx';
+import { Subject } from 'rxjs/Subject';
 // modals -- for interfaces obj
 import { user } from '../models/user'
 
@@ -10,8 +11,18 @@ export class UsersService {
 
   userscollection: AngularFirestoreCollection<user>;
   users: Observable<user[]>;
+
   userDoc: AngularFirestoreDocument<user>;
   AnthUser : any;
+
+  startAt = new Subject();
+  endAt = new Subject();
+
+  obj;
+
+  startobs = this.startAt.asObservable();
+  endobs = this.endAt.asObservable();
+
 
   constructor(public asf: AngularFirestore) { 
     this.userscollection = this.asf.collection('users');
@@ -20,12 +31,16 @@ export class UsersService {
     //   return ref.where('usarname', '==', 'Eachawy').where('password', '==', '123')
     // });
 
-
-
     //this.users = this.asf.collection('users').valueChanges();
-    // if(Observable == null){
 
-    // }
+
+
+    Observable.combineLatest(this.startobs, this.endobs).subscribe((value) => {
+      this.firequery(value[0], value[1]).subscribe((n) =>{
+        this.obj = n;
+      })
+    })
+
     this.users = this.asf.collection('users').snapshotChanges().map(change => {
       return change.map(a => {
         const data = a.payload.doc.data() as user;
@@ -33,6 +48,10 @@ export class UsersService {
         return data;
       })
     })
+  }
+
+  firequery (start, end){
+    return this.asf.collection('users', ref => ref.limit(4).orderBy('name').startAt(start).endAt(end)).valueChanges();
   }
 
 
