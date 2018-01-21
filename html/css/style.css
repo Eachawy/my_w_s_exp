@@ -441,6 +441,7 @@ figure.mainImage:hover {
     overflow: auto!important;
     width: 100%;
     -webkit-overflow-scrolling: touch;
+    overflow-x: hidden !important;
 }
 div.bigerImage {
     height: 100% !important;
@@ -1640,7 +1641,7 @@ END BLOG AREA
 #team .contentRight,
 #contactus .contentRight,
 #aboutus .contentRight {
-    overflow: scroll;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
 .mobilemenu {
@@ -3458,36 +3459,42 @@ screen and (max-device-width: 660px) and (min-device-width: 400px) and (orientat
     text-align: center;
     text-indent: 0;
 }
-.color-DB872D {
-    background: #db872d none repeat scroll 0 0 !important;
-    margin: 0 auto;
-    position: relative;
-    z-index: 40;
-}
-.color-DE6F7F {
-    background: #de6f7f none repeat scroll 0 0 !important;
-    left: -79px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -85px;
-    position: relative;
-    z-index: 30;
-}
-.color-65AC50 {
-    background: #65ac50 none repeat scroll 0 0 !important;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -151px;
-    position: relative;
-    right: -81px;
-    z-index: 20;
-}
-.color-DD56F1 {
-    background: #dd56f1 none repeat scroll 0 0 !important;
-    margin: -83px auto 0;
-    position: relative;
-    z-index: 10;
-}
+.myskills {position:relative;min-height:400px;}
+.sk_1,.sk_2,.sk_3,.sk_4,.sk_5,.sk_6,.sk_7,.sk_8,.sk_9,.sk_10,.sk_11,.sk_12
+{position: absolute;background: #db872d none repeat scroll 0 0;z-index: 10;}
+
+.sk_1 {background-color:#db872d;left: 40%;top: 162px;width: 200px;height: 200px;padding-top: 22px;}
+.sk_2 {background-color:#de6f7f;left: 28%;top: 200px;z-index: 11;}
+.sk_3 {background-color:#65ac50;right: 18%;z-index: 12;top: 190px;}
+.sk_4 {background-color:#dd56f1;right: 19%;z-index: 13;top: 97px;}
+.sk_5 {background-color:#c88fd1;right: 14%;z-index: 14;top: 300px;}
+.sk_6 {background-color: #faa449;left: 29%;z-index: 15;top: 302px;}
+.sk_7 {background-color: #76d75a;left: 42%;z-index: 16;top: 97px;}
+.sk_8 {background-color: #d96453;right:32%;z-index: 17;top:294px;}
+.sk_9 {background-color: #2daae7;left:26%;z-index: 18;top: 103px;}
+.sk_10 {background-color: #9758e9;right:3%;z-index: 19;top: 215px;}
+.sk_11 {background-color: #ff472c;left:10%;z-index: 20;top: 163px;}
+.sk_12 {background-color: #dd56f1;left:13%;z-index: 21;top:277px;}
+
+
+
+
+
+/*
+
+.sk_1 {background-color:#db872d;left: 30px;top: 60px;}
+.sk_2 {background-color:#de6f7f;left: -130px;top: -160px;z-index: 11;}
+.sk_3 {background-color:#65ac50;right: -104px;z-index: 12;top: -315px;}
+.sk_4 {background-color:#dd56f1;right: -81px;z-index: 13;top: -350px;}
+.sk_5 {background-color:#c88fd1;right: -199px;z-index: 14;top: -549px;}
+.sk_6 {background-color: #faa449;left: -37px;z-index: 15;top: -653px;}
+.sk_7 {background-color: #76d75a;left: -144px;z-index: 16;top: -777px;}
+.sk_8 {background-color: #d96453;right: -178px;z-index: 17;top: -897px;}
+.sk_9 {background-color: #2daae7;right: -81px;z-index: 18;top: -987px;}
+.sk_10 {background-color: #9758e9;right: 18px;z-index: 19;top: -1148px;}
+.sk_11 {background-color: #ff472c;right: -169px;z-index: 20;top: -1233px;}
+.sk_12 {background-color: #dd56f1;left: -119px;z-index: 21;top: -1420px;}*/
+
 .codeskillicon {
     padding: 30px 0;
 }
