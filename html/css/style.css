@@ -692,6 +692,7 @@ figure .contentsqz h2 {
     font-size: 22px;
     letter-spacing: 2px;
     margin-top: 15%;
+    cursor: pointer;
 }
 .callpost .content h2 {
     margin-top: 35%;
@@ -891,14 +892,14 @@ END PORTFOLIO
 #team aside,
 #blog aside,
 #posts aside {
-    width: 35%;
+    width: 60%; /* ------ 35% */
     float: left;
     height: 100%;
     position: relative;
 }
 #posts section,
 #blog section {
-    width: 65%;
+    width: 40%; /* ------65% */
     float: right;
     height: 100%;
     position: relative;
@@ -3637,3 +3638,8 @@ END WRAPER
 */
 .aboutview {position: relative;}
 .aboutview .sad {max-width: 100%;}
+
+
+
+.ooz {background: url('../images/projects/OOZ_l.jpg') no-repeat center;background-size: cover;}
+.ds {background: url('../images/projects/ds_l.jpg') no-repeat center;background-size: cover;}
