@@ -20,6 +20,10 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { UsersService } from './services/users.service';
 import { AddUserComponent } from './components/users/users.component';
 import { LoginComponent } from './components/login/login.component';
+import { Textboxcomponent } from './lookups/textbox.directive';
+import { Searchcomp } from './lookups/searchcomp.directive';
+import { SelectComponent } from './lookups/select.component';
+
 
 const appRoutes: Routes = [
   { path: 'welcome', canActivate: [AuthGuard], component: WelcomeComponent },
@@ -36,7 +40,10 @@ const appRoutes: Routes = [
     MenuComponent,
     WelcomeComponent,
     AddUserComponent,
-    LoginComponent
+    LoginComponent,
+    Textboxcomponent,
+    Searchcomp,
+    SelectComponent
   ],
   imports: [
     BrowserModule,

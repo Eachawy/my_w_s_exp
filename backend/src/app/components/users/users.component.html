@@ -5,20 +5,15 @@
     </span>
     <form materialize (ngSubmit)="onSubmit()" class="col s6">
       <div class="row">
+        <lookupTextbox pholder='Add User' colw='4' lbl='Name' [(ngModel)]='User.name' [ngModelOptions]="{standalone: true}"></lookupTextbox>
+        <lookupTextbox pholder='User Namer' colw='4' lbl='User Name' [(ngModel)]='User.username' [ngModelOptions]="{standalone: true}"></lookupTextbox>
+        <lookupTextbox pholder='Add Password' colw='4' lbl='Password' [(ngModel)]='User.password' [ngModelOptions]="{standalone: true}"></lookupTextbox>
+        <lookupselect [selectobj]="User" (onselect)="selecteddata($event)" colw='8' lbl='welcome Select'></lookupselect>
+
+
+
         <div class="input-field col s4">
-          <input type="text" placeholder="Add User" [(ngModel)]="User.name" name="name">
-          <label>Name</label>
-        </div>
-        <div class="input-field col s4">
-          <input type="text" placeholder="Add Username" [(ngModel)]="User.username" name="username">
-          <label>User Name</label>
-        </div>
-        <div class="input-field col s4">
-          <input type="text" placeholder="Add Password" [(ngModel)]="User.password" name="password">
-          <label>Password</label>
-        </div>
-        <div class="input-field col s12">
-          <select materialize="material_select" [materializeSelectOptions]="selectOptions" (change)="selecteddata($event.target.value)">
+          <select materialize="material_select" [materializeSelectOptions]="selectOptions" (change)="selecteddata($event)">
             <option value="" disabled selected>Choose your option</option>
             <option value="{{usname.id}}" *ngFor="let usname of usersService.AnthUser">{{usname.name}}</option>
           </select>
@@ -36,6 +31,8 @@
           </div>
         </div>
 
+        <appSearchcomp pholder='Add User' colw='4' lbl='Name' [(ngModel)]='User.username' [ngModelOptions]="{standalone: true}" (onsearch)="go($event)">
+        </appSearchcomp>
 
         <input type="submit" value="Submit" class="btn">
         <a class="brown btn" (click)='clear()'>Close</a>

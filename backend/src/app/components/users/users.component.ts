@@ -3,6 +3,7 @@ import { UsersService } from '../../services/users.service';
 import { user } from '../../models/user'
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
+import { Meta, Title } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-add-user',
@@ -11,7 +12,7 @@ import * as $ from 'jquery';
 })
 export class AddUserComponent implements OnInit {
 
-  User : user = {id:'', name : '', username : '', password : ''}
+  User : user;
   editstate: boolean = false;
   Userview: user[];
   autocomp: any;
@@ -22,7 +23,7 @@ export class AddUserComponent implements OnInit {
     // this.usersService.getUsers().subscribe((users) => {
     //   this.Userview = users;
     // });
-    // this.User = this.usersService.AnthUser;
+     this.User = this.usersService.AnthUser;
     // console.log(this.User);
     // for (let i = 0; i < this.usersService.AnthUser.length; i++){
     //   this.autocomp.push = this.usersService.AnthUser[i].name;
@@ -41,8 +42,13 @@ export class AddUserComponent implements OnInit {
 
   }
 
+  // for custom component
+  go(e){
+    console.log(e);
+  }
+
   selecteddata(v:any){
-    console.log(v);
+    console.log(v.target.value);
   }
   
   search2($event) {
