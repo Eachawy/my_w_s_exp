@@ -57,6 +57,7 @@ export class UsersService {
 
   userObser (){
     this.users.subscribe((users) => {
+      debugger;
       this.AnthUser = users;
     });
   }

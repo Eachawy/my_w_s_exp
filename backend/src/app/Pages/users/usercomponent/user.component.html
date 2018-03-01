@@ -1,0 +1,75 @@
+<div class="card adduserForm">
+  <div class="card-content">
+    <span class="card-title">
+      Add User
+    </span>
+    <form materialize (ngSubmit)="onSubmit()" class="col s6">
+      <div class="row">
+        <!-- <lookupTextbox pholder='Add User' colw='4' lbl='Name' [(ngModel)]='User.name' [ngModelOptions]="{standalone: true}"></lookupTextbox>
+        <lookupTextbox pholder='User Namer' colw='4' lbl='User Name' [(ngModel)]='User.username' [ngModelOptions]="{standalone: true}"></lookupTextbox>
+        <lookupTextbox pholder='Add Password' colw='4' lbl='Password' [(ngModel)]='User.password' [ngModelOptions]="{standalone: true}"></lookupTextbox>
+        <lookupselect [selectobj]="User" (onselect)="selecteddata($event)" colw='8' lbl='welcome Select'></lookupselect> -->
+
+
+
+        <div class="input-field col s4">
+          <select materialize="material_select" [materializeSelectOptions]="selectOptions" (change)="selecteddata($event)">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="{{usname.id}}" *ngFor="let usname of usersService.AnthUser">{{usname.name}}</option>
+          </select>
+          <label>Materialize Select</label>
+        </div>
+
+
+        <div class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">textsms</i>
+              <input type="text" class="autocomplete" materialize="autocomplete" (input)="search2($event)" [materializeParams]="[autocomp]">
+              <label for="autocomplete-input">Autocomplete</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- <appSearchcomp pholder='Add User' colw='4' lbl='Name' [(ngModel)]='User.username' [ngModelOptions]="{standalone: true}" (onsearch)="go($event)">
+        </appSearchcomp> -->
+
+        <input type="submit" value="Submit" class="btn">
+        <a class="brown btn" (click)='clear()'>Close</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="tbview" *ngIf="usersService.AnthUser?.length > 0; else noUsers">
+  <a class="orange btn" (click)="adduser()">Add New User</a>
+  <br>
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>User Name</th>
+        <th>Password</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersService.AnthUser">
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.password}}</td>
+        <td>
+          <a (click)="deleteuser($event, user)" class="delete"><i class="material-icons">&#xE872;</i></a>
+        </td>
+        <td>
+          <a (click)="edituser($event, user)" class="edit"><i class="material-icons">&#xE254;</i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noUsers>
+  <h5>There are no Users to list</h5>
+</ng-template>

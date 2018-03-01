@@ -1,0 +1,37 @@
+<div id="login-page" class="row">
+  <div class="col s12 z-depth-4 card-panel">
+    <form (submit)='getuser(Username.value, Password.value)'>
+      <div class="row">
+        <div class="input-field col s12 center">
+          <img src="images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login">
+          <p class="center login-form-text">Administration</p>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="mdi-social-person-outline prefix"></i>
+          <input id="username" autocomplete="new-password" type="text" #Username>
+          <label for="username" class="center-align">Username</label>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="mdi-action-lock-outline prefix"></i>
+          <input id="password" autocomplete="new-password" type="password" #Password>
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m12 l12  login-text">
+          <input type="checkbox" id="remember-me">
+          <label for="remember-me">Remember me</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="submit" value="Login" class="btn waves-effect waves-light col s12">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
