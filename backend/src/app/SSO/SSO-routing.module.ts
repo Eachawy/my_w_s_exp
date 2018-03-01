@@ -11,7 +11,7 @@ const rout: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'welcome', canActivate: [AuthGuard], component: WelcomeComponent },
-    { path: 'CIS', canActivate: [AuthGuard], loadChildren: './Pages/pages.module#pagesModule' },
+    { path: 'CIS', canActivate: [AuthGuard], loadChildren: '../Pages/pages.module#pagesModule' }
 ];
 
 @NgModule({
